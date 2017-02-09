@@ -22,6 +22,17 @@ Route::group(['prefix' => 'api'], function()
 {
     Route::resource('authenticate', 'AuthenticateController', ['only' => ['index']]);
     Route::post('authenticate', 'AuthenticateController@authenticate');
+
+//    Route::any('/test', function () {
+//
+//
+//
+//        $response = array('status' => 'ok', 'productList' => 'product list');
+//
+//        return \Response::json($response, 200, [], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+//    });
+
+    Route::any('test', 'AuthenticateController@test');
 });
 
 
